@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import ThemeToogle from './ThemeToggle';
 
 const Navbar = () => {
   return (
@@ -16,7 +17,9 @@ const Navbar = () => {
         </p>
       </Link>
       <p>Global Search</p>
-      <div className="flex-between gap-5">Theme</div>
+      <div className="flex-between gap-5">
+        <ThemeToogle />
+      </div>
     </nav>
   );
 };
