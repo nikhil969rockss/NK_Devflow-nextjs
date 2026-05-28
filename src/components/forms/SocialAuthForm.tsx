@@ -18,8 +18,8 @@ const SocialAuthForm = () => {
         error instanceof Error
           ? error.message
           : 'An error occurred during sign in';
-      toast.error(message, {
-        description: 'Please try again later',
+      toast.error('Sign-in Failed', {
+        description: message,
         position: 'top-center',
         duration: 3000,
       });
@@ -43,7 +43,10 @@ const SocialAuthForm = () => {
         />
         <span>Log in with GithHub</span>
       </Button>
-      <Button className={buttonClassName}>
+      <Button
+        onClick={() => handleSocialSignIn('google')}
+        className={buttonClassName}
+      >
         <Image
           src={'icons/google.svg'}
           alt="google logo"
