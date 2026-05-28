@@ -1,4 +1,4 @@
-export default function Home() {
+export default async function Home() {
   return (
     <div>
       <h1 className="font-inter">Welcome to next js</h1>
