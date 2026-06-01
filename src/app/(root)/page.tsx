@@ -4,7 +4,7 @@ import { auth, signOut } from '@/lib/auth';
 
 export default async function Home() {
   const authSession = await auth();
-  console.log(authSession);
+
   return (
     <div>
       <h1 className="font-inter">Welcome to next js</h1>

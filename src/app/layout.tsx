@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
-import { ThemeProvider } from 'next-themes';
+import ThemeProvider from '@/context/ThemeContext';
 import { Toaster } from '@/components/ui/sonner';
 
 const inter = Inter({
@@ -27,13 +27,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.className} ${spaceGrotesk.variable} h-full antialiased`}
       suppressHydrationWarning
+      className={`${inter.className} ${spaceGrotesk.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>
+
         <Toaster />
       </body>
     </html>
